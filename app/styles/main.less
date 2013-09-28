@@ -1,0 +1,122 @@
+@import 'bootstrap.less';
+
+// Glyphicon Location
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+
+// Mixins
+.border-radius(@size) {
+    -moz-border-radius: @size;
+    -webkit-border-radius: @size;
+    -o-border-radius: @size;
+    border-radius: @size;
+}
+
+// Variables
+@blue: #5B88F8;
+
+html, body {
+    margin: 0;
+    padding: 0px;
+}
+html {
+    background: url("/images/use_your_illusion.png") repeat scroll 0% 0% transparent;
+}
+body {
+    background: transparent;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+// Main Content
+.navbar-main {
+    border-radius: 0px;
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    .box-shadow(0px 4px 20px 2px #202020);
+}
+
+.main.container {
+    margin-top: 40px;
+
+    .table-inventory.table-responsive {
+        overflow-x: auto;
+        .border-radius(3px);
+        .box-shadow(0px 0px 1px 1px #141414);
+        border: none;
+
+        // Inverse Stipping
+        .table-striped > tbody > tr:nth-child(odd) > td,
+        .table-striped > tbody > tr:nth-child(odd) > th {
+            background-color: #1C1C1C;
+            border-top: 1px solid #141414;
+
+            input {
+                border: 1px solid #0f0f0f;
+            }
+        }
+
+        .table-inverse {
+            background: url('/images/black_denim.png') 0px 0px repeat transparent;
+            overflow: hidden;
+            margin-bottom: 0px;
+            
+            tr {
+                .box-shadow(~"0px 1px 0px #0a0a0a, 0px 1px 2px #585858");
+
+                td, th {
+                    border-top: 1px solid #0f0f0f;
+
+                }
+                th {
+                    color: #cccccc;
+                    #gradient.vertical(#383838, #0c0c0c, 0%, 80%);
+                    border-bottom: 1px solid #060606;
+                }
+                td {
+                    input {
+                        background: #333333;
+                        .border-radius(3px);
+                        border: 1px solid #050505;
+                        color: @blue;
+                        padding: 2px 4px;
+                    }
+                }
+            }
+            tbody {
+                
+                tr:last-child {
+                    .box-shadow(none);
+                }
+            }
+        }
+    }
+}
+
+// Sticky Footer
+html, body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -40px;
+}
+
+#push, footer {
+    height: 80px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 32px 0px;
+    background: #f0f0f0;
+}
+// End Sticky Footer

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
+  <gnm:Version Epoch="1" Major="12" Minor="7" Full="1.12.7"/>
+  <gnm:Attributes>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_vertical_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_notebook_tabs</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::do_auto_completion</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::is_protected</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+  </gnm:Attributes>
+  <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
+    <office:meta>
+      <dc:date>2013-09-28T07:25:51Z</dc:date>
+      <meta:creation-date>2013-09-28T07:24:51Z</meta:creation-date>
+    </office:meta>
+  </office:document-meta>
+  <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
+  <gnm:SheetNameIndex>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet1</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet2</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet3</gnm:SheetName>
+  </gnm:SheetNameIndex>
+  <gnm:Geometry Width="956" Height="802"/>
+  <gnm:Sheets>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet1</gnm:Name>
+      <gnm:MaxCol>1</gnm:MaxCol>
+      <gnm:MaxRow>51</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet1&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="1" endRow="51">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="0" startRow="52" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="2" startRow="0" endCol="255" endRow="51">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="1" Unit="48.75"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="1" endRow="51"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">Item</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">Price/unit</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">Breadboard</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="40">1.8999999999999999</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="60">Jumper Wires 65pc flexible</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="40">1.3</gnm:Cell>
+        <gnm:Cell Row="3" Col="0" ValueType="60">9v Battery Clip</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="40">0.080000000000000002</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="60">CS1307</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="40">0.12</gnm:Cell>
+        <gnm:Cell Row="5" Col="0" ValueType="60">2N3904</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="40">0.01065</gnm:Cell>
+        <gnm:Cell Row="6" Col="0" ValueType="60">2N3906</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="40">0.01065</gnm:Cell>
+        <gnm:Cell Row="7" Col="0" ValueType="60">Red Leds</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="40">0.02</gnm:Cell>
+        <gnm:Cell Row="8" Col="0" ValueType="60">Yellow Leds</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="40">0.02</gnm:Cell>
+        <gnm:Cell Row="9" Col="0" ValueType="60">Green Leds</gnm:Cell>
+        <gnm:Cell Row="9" Col="1" ValueType="40">0.02</gnm:Cell>
+        <gnm:Cell Row="10" Col="0" ValueType="60">BC547</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="40">0.02</gnm:Cell>
+        <gnm:Cell Row="11" Col="0" ValueType="60">BC557</gnm:Cell>
+        <gnm:Cell Row="11" Col="1" ValueType="40">0.02</gnm:Cell>
+        <gnm:Cell Row="12" Col="0" ValueType="60">CR2032</gnm:Cell>
+        <gnm:Cell Row="12" Col="1" ValueType="40">0.070000000000000007</gnm:Cell>
+        <gnm:Cell Row="13" Col="0" ValueType="60">1N4007</gnm:Cell>
+        <gnm:Cell Row="13" Col="1" ValueType="40">0.0023900000000000002</gnm:Cell>
+        <gnm:Cell Row="14" Col="0" ValueType="60">1uf 50v Capacitor</gnm:Cell>
+        <gnm:Cell Row="14" Col="1" ValueType="40">0.0096900000000000007</gnm:Cell>
+        <gnm:Cell Row="15" Col="0" ValueType="60">10uf 25v Capacitor</gnm:Cell>
+        <gnm:Cell Row="15" Col="1" ValueType="40">0.0097099999999999999</gnm:Cell>
+        <gnm:Cell Row="16" Col="0" ValueType="60">100uf 16v Capacitor</gnm:Cell>
+        <gnm:Cell Row="16" Col="1" ValueType="40">0.012</gnm:Cell>
+        <gnm:Cell Row="17" Col="0" ValueType="60">Thermister</gnm:Cell>
+        <gnm:Cell Row="17" Col="1" ValueType="40">0.070000000000000007</gnm:Cell>
+        <gnm:Cell Row="18" Col="0" ValueType="60">10nf Capacitor</gnm:Cell>
+        <gnm:Cell Row="18" Col="1" ValueType="40">0.0036600000000000001</gnm:Cell>
+        <gnm:Cell Row="19" Col="0" ValueType="60">22pf Capacitor</gnm:Cell>
+        <gnm:Cell Row="19" Col="1" ValueType="40">0.0036600000000000001</gnm:Cell>
+        <gnm:Cell Row="20" Col="0" ValueType="60">100nf Capactor</gnm:Cell>
+        <gnm:Cell Row="20" Col="1" ValueType="40">0.0045500000000000002</gnm:Cell>
+        <gnm:Cell Row="21" Col="0" ValueType="60">Photoresistor</gnm:Cell>
+        <gnm:Cell Row="21" Col="1" ValueType="40">0.025839999999999998</gnm:Cell>
+        <gnm:Cell Row="22" Col="0" ValueType="60">Tact Switch</gnm:Cell>
+        <gnm:Cell Row="22" Col="1" ValueType="40">0.0098899999999999995</gnm:Cell>
+        <gnm:Cell Row="23" Col="0" ValueType="60">32.768 Crystal</gnm:Cell>
+        <gnm:Cell Row="23" Col="1" ValueType="40">0.044900000000000002</gnm:Cell>
+        <gnm:Cell Row="24" Col="0" ValueType="60">Piezo buzzer</gnm:Cell>
+        <gnm:Cell Row="24" Col="1" ValueType="40">0.22</gnm:Cell>
+        <gnm:Cell Row="25" Col="0" ValueType="60">100 ohm resistor</gnm:Cell>
+        <gnm:Cell Row="25" Col="1" ValueType="40">0.0041000000000000003</gnm:Cell>
+        <gnm:Cell Row="26" Col="0" ValueType="60">220 ohm resistor</gnm:Cell>
+        <gnm:Cell Row="26" Col="1" ValueType="40">0.0041000000000000003</gnm:Cell>
+        <gnm:Cell Row="27" Col="0" ValueType="60">1K ohm resistor</gnm:Cell>
+        <gnm:Cell Row="27" Col="1" ValueType="40">0.0094999999999999998</gnm:Cell>
+        <gnm:Cell Row="28" Col="0" ValueType="60">2.2K ohm resistor</gnm:Cell>
+        <gnm:Cell Row="28" Col="1" ValueType="40">0.0098799999999999999</gnm:Cell>
+        <gnm:Cell Row="29" Col="0" ValueType="60">4.7K ohm resistor</gnm:Cell>
+        <gnm:Cell Row="29" Col="1" ValueType="40">0.0045890000000000002</gnm:Cell>
+        <gnm:Cell Row="30" Col="0" ValueType="60">10K ohm resistor</gnm:Cell>
+        <gnm:Cell Row="30" Col="1" ValueType="40">0.0045890000000000002</gnm:Cell>
+        <gnm:Cell Row="31" Col="0" ValueType="60">22K ohm resistor</gnm:Cell>
+        <gnm:Cell Row="31" Col="1" ValueType="40">0.0045890000000000002</gnm:Cell>
+        <gnm:Cell Row="32" Col="0" ValueType="60">100K ohm resistor</gnm:Cell>
+        <gnm:Cell Row="32" Col="1" ValueType="40">0.0045890000000000002</gnm:Cell>
+        <gnm:Cell Row="33" Col="0" ValueType="60">330K ohm resistor</gnm:Cell>
+        <gnm:Cell Row="33" Col="1" ValueType="40">0.0045890000000000002</gnm:Cell>
+        <gnm:Cell Row="34" Col="0" ValueType="60">1M ohm resistor</gnm:Cell>
+        <gnm:Cell Row="34" Col="1" ValueType="40">0.0045890000000000002</gnm:Cell>
+        <gnm:Cell Row="35" Col="0" ValueType="60">Potentiometer</gnm:Cell>
+        <gnm:Cell Row="35" Col="1" ValueType="40">0.27000000000000002</gnm:Cell>
+        <gnm:Cell Row="36" Col="0" ValueType="60">555 ic</gnm:Cell>
+        <gnm:Cell Row="36" Col="1" ValueType="40">0.0533</gnm:Cell>
+        <gnm:Cell Row="37" Col="0" ValueType="60">LM358</gnm:Cell>
+        <gnm:Cell Row="37" Col="1" ValueType="40">0.106</gnm:Cell>
+        <gnm:Cell Row="38" Col="0" ValueType="60">LM386</gnm:Cell>
+        <gnm:Cell Row="38" Col="1" ValueType="40">0.11</gnm:Cell>
+        <gnm:Cell Row="39" Col="0" ValueType="60">LM317L</gnm:Cell>
+        <gnm:Cell Row="39" Col="1" ValueType="40">0.050319999999999997</gnm:Cell>
+        <gnm:Cell Row="40" Col="0" ValueType="60">CD4017</gnm:Cell>
+        <gnm:Cell Row="40" Col="1" ValueType="40">0.25</gnm:Cell>
+        <gnm:Cell Row="41" Col="0" ValueType="60">78L05</gnm:Cell>
+        <gnm:Cell Row="41" Col="1" ValueType="40">0.01924</gnm:Cell>
+        <gnm:Cell Row="42" Col="0" ValueType="60">slide switch</gnm:Cell>
+        <gnm:Cell Row="42" Col="1" ValueType="40">0.032000000000000001</gnm:Cell>
+        <gnm:Cell Row="43" Col="0" ValueType="60">trimmer</gnm:Cell>
+        <gnm:Cell Row="43" Col="1" ValueType="40">0.027</gnm:Cell>
+        <gnm:Cell Row="44" Col="0" ValueType="60">1N4148</gnm:Cell>
+        <gnm:Cell Row="44" Col="1" ValueType="40">0.0057299999999999999</gnm:Cell>
+        <gnm:Cell Row="45" Col="0" ValueType="60">Uno</gnm:Cell>
+        <gnm:Cell Row="45" Col="1" ValueType="40">4.0389999999999997</gnm:Cell>
+        <gnm:Cell Row="46" Col="0" ValueType="60">USB Cable</gnm:Cell>
+        <gnm:Cell Row="46" Col="1" ValueType="40">4.0389999999999997</gnm:Cell>
+        <gnm:Cell Row="47" Col="0" ValueType="60">5.1M ohm resistor</gnm:Cell>
+        <gnm:Cell Row="47" Col="1" ValueType="40">0.0086899999999999998</gnm:Cell>
+        <gnm:Cell Row="48" Col="0" ValueType="60">Tilt Switch</gnm:Cell>
+        <gnm:Cell Row="48" Col="1" ValueType="40">0.099000000000000005</gnm:Cell>
+        <gnm:Cell Row="49" Col="0" ValueType="60">Servo</gnm:Cell>
+        <gnm:Cell Row="49" Col="1" ValueType="40">1.8899999999999999</gnm:Cell>
+        <gnm:Cell Row="50" Col="0" ValueType="60">RGB Led</gnm:Cell>
+        <gnm:Cell Row="50" Col="1" ValueType="40">0.016449999999999999</gnm:Cell>
+        <gnm:Cell Row="51" Col="0" ValueType="60">Relay</gnm:Cell>
+        <gnm:Cell Row="51" Col="1" ValueType="40">0.33929999999999999</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet2</gnm:Name>
+      <gnm:MaxCol>-1</gnm:MaxCol>
+      <gnm:MaxRow>-1</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet2&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Cells/>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet3</gnm:Name>
+      <gnm:MaxCol>-1</gnm:MaxCol>
+      <gnm:MaxRow>-1</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet3&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Cells/>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+  </gnm:Sheets>
+  <gnm:UIData SelectedTab="0"/>
+</gnm:Workbook>

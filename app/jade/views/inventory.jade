@@ -1,0 +1,19 @@
+form(name='inventoryForm', ng-controller='inventoryForm')
+  .table-inventory.table-responsive
+    table.table.table-striped.table-inverse
+      thead
+        tr
+          th Item
+          th Item Code
+          th Price/Unit
+          th Description
+      tbody
+        tr(ng-repeat='item in inventory')
+          td
+            input(value='{{item.itemName}}')
+          td
+            input(value='{{item.code}}')
+          td
+            input(value='{{item.price}}')
+          td
+            input(value='{{item.desc}}')

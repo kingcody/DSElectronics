@@ -1,0 +1,31 @@
+
+<form name="inventoryForm" ng-controller="inventoryForm">
+  <div class="table-inventory table-responsive">
+    <table class="table table-striped table-inverse">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Item Code</th>
+          <th>Price/Unit</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in inventory">
+          <td>
+            <input value="{{item.itemName}}"/>
+          </td>
+          <td>
+            <input value="{{item.code}}"/>
+          </td>
+          <td>
+            <input value="{{item.price}}"/>
+          </td>
+          <td>
+            <input value="{{item.desc}}"/>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

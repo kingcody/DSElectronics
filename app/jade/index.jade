@@ -1,0 +1,91 @@
+!!!
+// [if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]
+// [if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]
+// [if IE 8]>         <html class="no-js lt-ie9"> <![endif]
+// [if gt IE 8]><!
+html.no-js
+  //<![endif]
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width")
+    // Place favicon.ico and apple-touch-icon.png in the root directory
+    
+    // build:css(.tmp) styles/main.css 
+    link(rel="stylesheet", href="styles/main.css")
+    // endbuild
+    //- build:head
+  body(ng-app="DSElectronicsApp")
+    //[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+      <![endif]
+    //[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+      <![endif]
+
+    // Add your site or application content here
+    nav.navbar.navbar-main.navbar-inverse(role='navigation')
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+          span.sr-only Toggle Navigation
+          span.glyphicon.glyphicon-tasks
+        a.navbar-brand(href='javascript:void(0)') DS Electronics
+      .navbar-main-collapse.navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li.dropdown.active
+            a(href='javascript:void(0)', data-toggle='dropdown') 
+              | Views 
+              b.caret
+            ul.dropdown-menu
+              li.active
+                a(href='javascript:void(0)') Inventory Items
+              li
+                a(href='javascript:void(0)') Vendors
+              li
+                a(href='javascript:void(0)') Kits
+          li
+            a(href='javascript:void(0)') Research
+          li
+            a(href='javascript:void(0)') Tools
+
+    div.main.container(ng-view)
+
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script.
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+
+
+    script(src="bower_components/jquery/jquery.js")
+    script(src="bower_components/angular/angular.js")
+
+    
+    // build:js scripts/plugins.js 
+    script(src="bower_components/bootstrap/js/affix.js")
+    script(src="bower_components/bootstrap/js/alert.js")
+    script(src="bower_components/bootstrap/js/dropdown.js")
+    script(src="bower_components/bootstrap/js/tooltip.js")
+    script(src="bower_components/bootstrap/js/modal.js")
+    script(src="bower_components/bootstrap/js/transition.js")
+    script(src="bower_components/bootstrap/js/button.js")
+    script(src="bower_components/bootstrap/js/popover.js")
+    script(src="bower_components/bootstrap/js/carousel.js")
+    script(src="bower_components/bootstrap/js/scrollspy.js")
+    script(src="bower_components/bootstrap/js/collapse.js")
+    script(src="bower_components/bootstrap/js/tab.js")
+    // endbuild
+    
+    // build:js scripts/plugins.js 
+    script(src="/socket.io/socket.io.js")
+    // endbuild
+    
+    // build:js({.tmp,app}) scripts/scripts.js 
+    script(src="scripts/app.js")
+    script(src="scripts/controllers/main.js")
+    // endbuild
+    //- build:body

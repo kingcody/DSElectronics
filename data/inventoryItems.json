@@ -1,0 +1,20 @@
+[
+  {
+    "itemName": "100k ohm Resistor",
+    "code": "12345",
+    "price": "0.0005",
+    "desc": "Basic Resistor"
+  },
+  {
+    "itemName": "10 uF Capacitor",
+    "code": "12346",
+    "price": "0.00001",
+    "desc": "Basic Ceramic Capacitor"
+  },
+  {
+    "itemName": "100 uF Capacitor",
+    "code": "12346",
+    "price": "0.000012",
+    "desc": "Basic Ceramic Capacitor"
+  }
+]
