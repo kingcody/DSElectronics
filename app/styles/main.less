@@ -8,7 +8,7 @@
 }
 
 
-// Mixins
+// ### Mixins ###
 .border-radius(@size) {
     -moz-border-radius: @size;
     -webkit-border-radius: @size;
@@ -16,8 +16,41 @@
     border-radius: @size;
 }
 
-// Variables
+// ### Variables ###
 @blue: #5B88F8;
+@lightBlue: lighten(@blue, 7%);
+@lighterBlue: lighten(@blue, 4%);
+@darkBlue: darken(@blue, 7%);
+@darkerBlue: darken(@blue, 4%);
+
+@grey: #999999;
+@lightGrey: lighten(@grey, 7%);
+@lighterGrey: lighten(@grey, 4%);
+@darkGrey: darken(@grey, 7%);
+@darkerGrey: darken(@grey, 4%);
+
+@black: #181818;
+@lightBlack: lighten(@black, 7%);
+@lighterBlack: lighten(@black, 4%);
+@darkBlack: darken(@black, 7%);
+@darkerBlack: darken(@black, 4%);
+
+@navInverseBG: #161718;
+@navInverseBS: darken(@navInverseBG, 4%);
+@navInverseDropdownBG: #323232;
+@navInverseDropdownBD: darken(@navInverseDropdownBG, 4%);
+
+@navInverseDropDownDivider: darken(@navInverseBG, 7%);
+@navInverseDropDownDividerHL: lighten(@navInverseBG, 7%);
+
+@tableInverseHeadBG: darken(@navInverseBG, 3%);
+@tableInverseHeadHL: lighten(@navInverseBG, 5%);
+@tableInverseStripping: lighten(@navInverseBG, 2%);
+
+@footerBG: @navInverseBG;
+@footerBS: darken(@footerBG, 5%);
+@footerTextShadow: darken(@footerBG, 6%);
+
 
 html, body {
     margin: 0;
@@ -32,15 +65,77 @@ body {
     color: #333;
 }
 
-// Main Content
-.navbar-main {
+// ### Main Navbar Inverse Style ###
+.navbar-main.navbar-inverse {
+    background-color: @navInverseBG;
     border-radius: 0px;
     border-top: 0px solid transparent;
     border-left: 0px solid transparent;
     border-right: 0px solid transparent;
-    .box-shadow(0px 4px 20px 2px #202020);
+    .box-shadow(0px 4px 20px 2px @navInverseBS);
+
+    // various navbar overwrites
+    .divider {
+        height: 2px;
+        background-color: @navInverseDropDownDivider;
+        border-bottom: 1px solid @navInverseDropDownDividerHL;
+    }
+    .navbar-inverse .navbar-nav > .active > a,
+    .navbar-inverse .navbar-nav > .active > a:hover,
+    .navbar-inverse .navbar-nav > .active > a:focus {
+        outline: none;
+    }
+
+    // main inverse navbar header
+    .navbar-header {
+
+        .navbar-toggle {
+            color: @lighterGrey;
+            background-color: lighten(@navInverseBG, 1%);
+            .box-shadow(0px 0px 2px 1px lighten(@navInverseBG, 3%)~"," 0px 0px 1px 1px darken(@navInverseBG, 2%) inset);
+            border-color: darken(@navInverseBG, 4%);
+            padding: 7px 10px;
+        }
+        .navbar-toggle:not(.collapsed) {
+            color: @darkerBlue;
+
+        }
+    }
+
+    // main inverse navbar menu
+    .navbar-main-collapse {
+        border-color: @navInverseDropDownDivider;
+        .box-shadow(0px 1px 0px @navInverseDropDownDividerHL inset);
+
+        .nav.navbar-nav {
+
+            .dropdown {
+
+                @media (max-width: @screen-sm) {
+                    li > a {
+                            margin-left: 7%;
+                            margin-right: 7%;
+                            padding-left: 15px;
+                            padding-right: 10px;
+                        }
+                }
+                
+                @media (min-width: @screen-sm) {
+                    .dropdown-menu {
+                        background: @navInverseDropdownBG;
+                        border: 1px solid @navInverseDropdownBD;
+
+                        li:not(.active) > a:not(:focus):not(:hover) {
+                            color: #888888;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
+// ### Main Content ###
 .main.container {
     margin-top: 40px;
 
@@ -53,7 +148,7 @@ body {
         // Inverse Stipping
         .table-striped > tbody > tr:nth-child(odd) > td,
         .table-striped > tbody > tr:nth-child(odd) > th {
-            background-color: #1C1C1C;
+            background-color: @tableInverseStripping;
             border-top: 1px solid #141414;
 
             input {
@@ -71,15 +166,18 @@ body {
 
                 td, th {
                     border-top: 1px solid #0f0f0f;
+                    //border: 0px none;
 
                 }
                 th {
                     color: #cccccc;
-                    #gradient.vertical(#383838, #0c0c0c, 0%, 80%);
+                    text-shadow: 0px 0px .3em #000000;
+                    #gradient.vertical(@tableInverseHeadHL, @tableInverseHeadBG, 0%, 80%);
                     border-bottom: 1px solid #060606;
                 }
                 td {
-                    input {
+                    input.form-control {
+                        margin-top: 3px;
                         background: #333333;
                         .border-radius(3px);
                         border: 1px solid #050505;
@@ -92,13 +190,62 @@ body {
                 
                 tr:last-child {
                     .box-shadow(none);
+
+                    td, th {
+                        border-top: 1px solid #181818;
+                    }
                 }
             }
         }
     }
 }
 
-// Sticky Footer
+// ### Modals ###
+
+// login Modal
+#loginModal {
+    
+    .modal-dialog {
+
+        .modal-content {
+            @dividerLine: desaturate(@blue, 4%);
+            background: url('/images/dark_mosaic.png') 0 0 repeat;
+            color: lighten(@lightGrey, 5%);
+
+            .modal-header {
+                border-bottom-color: @dividerLine;
+
+                h4 {
+                    margin-left: 8px;
+                }
+            }
+            .modal-body {
+                background: @darkerBlack;
+                
+                form.form-horizontal {
+                    margin-left: 8px;
+                    margin-right: 8px;
+
+                    input {
+                        border-color: @darkBlack;
+                        background: @lightBlack;
+                    }
+                    input:active, input:focus {
+                        border-color: desaturate(@dividerLine, 2%);
+                        .box-shadow(0px 1px 1px rgba(0, 0, 0, 0.075) inset~"," 0px 0px 8px rgba(102, 175, 233, 0.6));
+                    }
+                }
+            }
+            .modal-footer {
+                margin-top: 0px;
+                border-top-color: @dividerLine;
+            }
+        }
+    }
+}
+
+
+// ### Sticky Footer ###
 html, body {
     height: 100%;
 }
@@ -107,7 +254,8 @@ html, body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -40px;
+    margin: 80px auto -40px;
+    border-bottom: 1px solid #111111;
 }
 
 #push, footer {
@@ -115,8 +263,16 @@ html, body {
 }
 
 footer {
+    height: auto;
     margin-top: 40px;
-    padding: 32px 0px;
-    background: #f0f0f0;
+    padding: 24px 0px;
+    #gradient.vertical(@footerBS, @footerBG, 0%, 35%);
+    border-top: 1px solid desaturate(darken(@blue, 20%), 45%);
+
+    p {
+        margin-bottom: 0px;
+        color: #777777;
+        text-shadow: 0px 0.1em 0.3em @footerTextShadow, 0px 0.05em 0.2em @footerTextShadow;
+    }
 }
 // End Sticky Footer

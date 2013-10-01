@@ -3,7 +3,7 @@
 <!-- [if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!-- [if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!-- [if gt IE 8]><!-->
-<html class="no-js">
+<html ng-app="DSElectronicsApp" class="no-js">
   <!--<![endif]-->
   <head>
     <meta charset="utf-8">
@@ -16,34 +16,90 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild-->
   </head>
-  <body ng-app="DSElectronicsApp"><!--[if lt IE 7]>
+  <body ng-controller="mainCtrl"><!--[if lt IE 7]>
     <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]--><!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <!-- Add your site or application content here-->
-    <nav role="navigation" class="navbar navbar-main navbar-inverse">
+    <nav role="navigation" ng-controller="navMenu" class="navbar navbar-main navbar-inverse navbar-fixed-top">
       <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle"><span class="sr-only">Toggle Navigation</span><span class="glyphicon glyphicon-tasks"></span></button><a href="javascript:void(0)" class="navbar-brand">DS Electronics</a>
+        <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle Navigation</span><span class="glyphicon glyphicon-tasks"></span></button><a href="javascript:void(0)" class="navbar-brand">DS Electronics </a>
       </div>
       <div class="navbar-main-collapse navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li class="dropdown active"><a href="javascript:void(0)" data-toggle="dropdown">
                
               Views <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="active"><a href="javascript:void(0)">Inventory Items</a></li>
-              <li><a href="javascript:void(0)">Vendors</a></li>
-              <li><a href="javascript:void(0)">Kits</a></li>
+            <ul role="menu" aria-labelledby="dropdownMenuViews" class="dropdown-menu">
+              <li class="active"><a href="javascript:void(0)" role="menuitem" tabindex="-1">Inventory Items</a></li>
+              <li><a href="javascript:void(0)" role="menuitem" tabindex="-1">Vendors</a></li>
+              <li><a href="javascript:void(0)" role="menuitem" tabindex="-1">Kits</a></li>
+              <li class="divider visible-xs">  </li>
             </ul>
           </li>
           <li><a href="javascript:void(0)">Research</a></li>
           <li><a href="javascript:void(0)">Tools</a></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="divider visible-xs {{authenticated|loginButton:true}}"></li>
+          <li><a href="javascript:void(0)" ng-init="login='Login'" ng-bind="login" ng-click="loginModal()" class="{{authenticated|loginButton:true}}"></a></li>
+          <li class="divider visible-xs {{authenticated|loginButton:false}}"></li>
+          <li><a href="javascript:void(0)" ng-init="logout='Logout'" ng-bind="logout" ng-click="logoutModal()" class="{{authenticated|loginButton:false}}"></a></li>
+        </ul>
       </div>
     </nav>
-    <div ng-view class="main container"></div>
+    <div id="wrap">
+      <div ng-view class="main container"></div>
+      <div id="push"></div>
+    </div>
+    <footer>
+      <p class="text-muted text-center">&copy; 2013 DS Electronics, all rights reserved. Site proudly crafted by Digitally Seamless
+      </p>
+    </footer>
+    <!-- ### bootstrap modals ###-->
+    <!-- login-->
+    <div id="loginModal" role="dialog" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true" ng-controller="loginModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" ng-click="loginForm.password=&quot;&quot;" class="close">&times;</button>
+            <h4 class="modal-title">Login</h4>
+          </div>
+          <div class="modal-body">
+            <!-- login form goes here-->
+            <form role="form" class="form-horizontal">
+              <div class="form-group">
+                <label for="loginUsername" class="col-lg-2 control-label">Username</label>
+                <div class="col-lg-10">
+                  <input id="loginUsername" type="text" placeholder="username" ng-model="loginForm.username" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="loginPassword" class="col-lg-2 control-label">Password</label>
+                <div class="col-lg-10">
+                  <input id="loginPassword" type="password" placeholder="password" ng-model="loginForm.password" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" ng-model="loginForm.remember">Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" ng-click="loginForm.password=&quot;&quot;" class="btn btn-default">cancel</button>
+            <button type="button" ng-click="login()" class="btn btn-primary">login</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <script>
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -55,6 +111,9 @@
     </script>
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <!-- build:js scripts/plugins.js -->
     <script src="bower_components/bootstrap/js/affix.js"></script>
     <script src="bower_components/bootstrap/js/alert.js"></script>
@@ -70,11 +129,13 @@
     <script src="bower_components/bootstrap/js/tab.js"></script>
     <!-- endbuild-->
     <!-- build:js scripts/plugins.js -->
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/socket.io/socket.io.js"></script>
     <!-- endbuild-->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/session/main.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/filters/main.js"></script>
     <!-- endbuild-->
   </body>
 </html>

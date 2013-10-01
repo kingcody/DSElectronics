@@ -10,10 +10,10 @@ form(name='inventoryForm', ng-controller='inventoryForm')
       tbody
         tr(ng-repeat='item in inventory')
           td
-            input(value='{{item.itemName}}')
+            input.form-control(type='text', value='{{item.itemName}}')
           td
-            input(value='{{item.code}}')
+            input.form-control(type='text', value='{{item.code}}')
           td
-            input(value='{{item.price}}')
+            input.form-control(type='text', value='{{item.price}}')
           td
-            input(value='{{item.desc}}')
+            input.form-control(type='text', value='{{item.desc}}')

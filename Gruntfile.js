@@ -1,11 +1,14 @@
 // Generated on 2013-09-25 using generator-angular-express 0.0.3
 'use strict';
 var LIVERELOAD_PORT = 35729;
-var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
+var lrSnippet = require('connect-livereload')({
+  src: "https://' + (location.hostname || 'localhost') + ':" + LIVERELOAD_PORT + "/livereload.js?snipver=1"
+
+});
 var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
 var path = require('path');
 var mountFolder = function (connect, dir) {
-  return connect.static(require('path').resolve(dir));
+  return connect.static(path.resolve(dir));
 };
 
 // # Globbing
@@ -53,12 +56,19 @@ module.exports = function (grunt) {
       },
       livereload: {
         options: {
-          livereload: LIVERELOAD_PORT
+          livereload: {
+            port: LIVERELOAD_PORT,
+            key: path.resolve('server/ssl/https.key'),
+            cert: path.resolve('server/ssl/https.crt'),
+            ca: path.resolve('server/ssl/ca.crt'),
+            passphrase: 'fixt16'
+          }
+
         },
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
+          '{.tmp,<%= yeoman.app %>}/scripts/{,**/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           'data/{,*/}*.json'
         ]
@@ -79,22 +89,25 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '0.0.0.0'
+        hostname: '0.0.0.0',
+        // SSL Config
+        protocol: 'https',
+        key: grunt.file.read('server/ssl/https.key').toString(),
+        cert: grunt.file.read('server/ssl/https.crt').toString(),
+        ca: grunt.file.read('server/ssl/ca.crt').toString(),
+        passphrase: 'fixt16'
       },
       proxies: [ // Local
         {
-          context: '/api',
+          context: [ '/api', '/session' ],
           host: 'localhost',
-          port: 9001
-        },
-        {
-          context: '/socket.io',
-          host: 'localhost',
-          port: 9001
+          port: 9001,
+          https: true
         }
       ],
       livereload: {
         options: {
+          protocol: 'https',
           middleware: function (connect) {
             return [
               lrSnippet,
@@ -394,7 +407,6 @@ module.exports = function (grunt) {
     express: {
       custom: {
         options: {
-          hostname: 'localhost',
           port: 9001,
           server: path.resolve('./server/main')
         }

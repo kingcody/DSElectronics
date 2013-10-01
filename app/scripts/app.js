@@ -1,14 +1,17 @@
 'use strict';
 
 
-  var socket = io.connect(':9001');
+  var socket = io.connect(':9001', {secure: true});
 
-angular.module('DSElectronicsApp', [])
+var app = angular.module('DSElectronicsApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/inventory.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/main.html',
+        controller: 'welcome'
+      }).when('view/inventory', {
+        templateUrl: 'apiViews/inventory',
+        controller: 'inventory'
       })
       .otherwise({
         redirectTo: '/'

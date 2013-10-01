@@ -1,5 +1,23 @@
 [
   {
+    "itemName": "5k ohm Resistor",
+    "code": "12342",
+    "price": "0.0004",
+    "desc": "Basic Resistor"
+  },
+  {
+    "itemName": "10k ohm Resistor",
+    "code": "12343",
+    "price": "0.0005",
+    "desc": "Basic Resistor"
+  },
+  {
+    "itemName": "20k ohm Resistor",
+    "code": "12344",
+    "price": "0.0005",
+    "desc": "Basic Resistor"
+  },
+  {
     "itemName": "100k ohm Resistor",
     "code": "12345",
     "price": "0.0005",

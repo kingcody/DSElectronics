@@ -3,7 +3,7 @@
 // [if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]
 // [if IE 8]>         <html class="no-js lt-ie9"> <![endif]
 // [if gt IE 8]><!
-html.no-js
+html.no-js(ng-app="DSElectronicsApp")
   //<![endif]
   head
     meta(charset="utf-8")
@@ -17,7 +17,7 @@ html.no-js
     link(rel="stylesheet", href="styles/main.css")
     // endbuild
     //- build:head
-  body(ng-app="DSElectronicsApp")
+  body(ng-controller='mainCtrl')
     //[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
       <![endif]
@@ -27,31 +27,79 @@ html.no-js
       <![endif]
 
     // Add your site or application content here
-    nav.navbar.navbar-main.navbar-inverse(role='navigation')
+    nav.navbar.navbar-main.navbar-inverse.navbar-fixed-top(role='navigation', ng-controller='navMenu')
       .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
           span.sr-only Toggle Navigation
           span.glyphicon.glyphicon-tasks
-        a.navbar-brand(href='javascript:void(0)') DS Electronics
+        a.navbar-brand(href='javascript:void(0)') DS Electronics 
       .navbar-main-collapse.navbar-collapse.collapse
         ul.nav.navbar-nav
           li.dropdown.active
             a(href='javascript:void(0)', data-toggle='dropdown') 
               | Views 
               b.caret
-            ul.dropdown-menu
+            ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenuViews')
               li.active
-                a(href='javascript:void(0)') Inventory Items
+                a(href='javascript:void(0)', role='menuitem', tabindex='-1') Inventory Items
               li
-                a(href='javascript:void(0)') Vendors
+                a(href='javascript:void(0)', role='menuitem', tabindex='-1') Vendors
               li
-                a(href='javascript:void(0)') Kits
+                a(href='javascript:void(0)', role='menuitem', tabindex='-1') Kits
+              li.divider.visible-xs   
           li
             a(href='javascript:void(0)') Research
           li
             a(href='javascript:void(0)') Tools
 
-    div.main.container(ng-view)
+        ul.nav.navbar-nav.navbar-right
+          li.divider.visible-xs(class='{{authenticated|loginButton:true}}')
+          li
+            a(href='javascript:void(0)', ng-init="login='Login'", class='{{authenticated|loginButton:true}}', ng-bind='login', ng-click='loginModal()')
+          li.divider.visible-xs(class='{{authenticated|loginButton:false}}')
+          li
+            a(href="javascript:void(0)", ng-init="logout='Logout'", class='{{authenticated|loginButton:false}}', ng-bind='logout', ng-click='logoutModal()')
+
+    #wrap
+      .main.container(ng-view)
+      
+      #push
+
+    footer
+      p.text-muted.text-center
+        - var date = new Date, date = date.getFullYear();
+        | &copy; #{date} DS Electronics, all rights reserved. Site proudly crafted by Digitally Seamless
+
+    // ### bootstrap modals ###
+    // login
+    #loginModal.modal.fade(role='dialog', tabindex='-1', aria-labelledby='loginModal', aria-hidden='true', ng-controller='loginModal')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true', ng-click='loginForm.password=""') &times;
+            h4.modal-title Login
+          .modal-body
+            // login form goes here
+            form.form-horizontal(role='form')
+              .form-group
+                label.col-lg-2.control-label(for='loginUsername') Username
+                .col-lg-10
+                  input#loginUsername.form-control(type='text', placeholder='username', ng-model='loginForm.username')
+              .form-group
+                label.col-lg-2.control-label(for='loginPassword') Password
+                .col-lg-10
+                  input#loginPassword.form-control(type='password', placeholder='password', ng-model='loginForm.password')
+              .form-group
+                .col-lg-offset-2.col-lg-10
+                  .checkbox
+                    label
+                      input(type='checkbox', ng-model='loginForm.remember')
+                      | Remember me
+              
+
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal', ng-click='loginForm.password=""') cancel
+            button.btn.btn-primary(type='button', ng-click='login()') login
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
@@ -63,6 +111,9 @@ html.no-js
 
     script(src="bower_components/jquery/jquery.js")
     script(src="bower_components/angular/angular.js")
+    script(src="bower_components/angular-resource/angular-resource.js")
+    script(src="bower_components/angular-cookies/angular-cookies.js")
+    script(src="bower_components/angular-sanitize/angular-sanitize.js")
 
     
     // build:js scripts/plugins.js 
@@ -81,11 +132,13 @@ html.no-js
     // endbuild
     
     // build:js scripts/plugins.js 
-    script(src="/socket.io/socket.io.js")
+    script(src="scripts/socket.io/socket.io.js")
     // endbuild
     
     // build:js({.tmp,app}) scripts/scripts.js 
     script(src="scripts/app.js")
+    script(src="scripts/session/main.js")
     script(src="scripts/controllers/main.js")
+    script(src="scripts/filters/main.js")
     // endbuild
     //- build:body
